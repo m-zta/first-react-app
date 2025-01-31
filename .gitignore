@@ -3,22 +3,52 @@ logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+/.pnp
+.pnp.js
+
+# Build output
 dist
 dist-ssr
-*.local
+out
+.next
+.vercel
+.netlify
 
-# Editor directories and files
+# Static build cache
+.cache
+.vite
+.vite-temp
+temp
+build
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
+*.sw?
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Jest / Cypress test coverage
+coverage/
