@@ -20,7 +20,8 @@ export default function MyNavbar() {
             height="30"
             className="d-inline-block align-top"
             alt="logo"
-          />
+          />{" "}
+          Bloody App
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         {/* toggle button shown on small screens */}
