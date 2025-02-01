@@ -1,0 +1,18 @@
+/* pages.css - Styling for Home Page */
+
+.home-container {
+  text-align: left;
+}
+
+.home-container h1 {
+  font-size: 2rem;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.home-container img {
+  border: 3px solid #646cff;
+}
