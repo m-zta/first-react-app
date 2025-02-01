@@ -7,6 +7,8 @@ import { Form, FormControl, Button } from "react-bootstrap"; // to create a sear
 
 import pokerCards from "../assets/images/poker-cards.png"; // to import the logo image
 
+import "../assets/styles/navbar.css";
+
 export default function MyNavbar() {
   return (
     <Navbar expand="md" bg="primary" data-bs-theme="dark">
@@ -16,8 +18,6 @@ export default function MyNavbar() {
         <Navbar.Brand as={Link} to="/">
           <img
             src={pokerCards}
-            width="30"
-            height="30"
             className="d-inline-block align-top"
             alt="logo"
           />{" "}
