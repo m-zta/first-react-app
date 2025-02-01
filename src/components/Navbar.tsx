@@ -5,6 +5,8 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"; // to cre
 import { Link } from "react-router-dom"; // to create links in the navbar to different pages of the app
 import { Form, FormControl, Button } from "react-bootstrap"; // to create a search bar in the navbar
 
+import pokerCards from "../assets/images/poker-cards.png"; // to import the logo image
+
 export default function MyNavbar() {
   return (
     <Navbar expand="md" bg="primary" data-bs-theme="dark">
@@ -12,7 +14,13 @@ export default function MyNavbar() {
       <Container>
         {/* Container is not required, but adds padding */}
         <Navbar.Brand as={Link} to="/">
-          My Shitty App
+          <img
+            src={pokerCards}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="logo"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         {/* toggle button shown on small screens */}
