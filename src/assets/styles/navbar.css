@@ -1,10 +1,78 @@
-/* navbar.css (handles styles only for the Navbar) */
+/* Navbar Image Styling */
 .navbar-brand img {
   height: 30px;
   width: 30px;
   margin-right: 10px;
 }
 
+/* not doing anything... */
 .navbar {
   padding: 10px 20px;
+}
+
+/* Dark Mode Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #bebebe;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.nav-link {
+  /* Had to enforce the white font color for
+  the drop down title with !important. There might
+  be a better fix, tho...*/
+  color: white !important;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3 ease-in-out;
+}
+
+.nav-link:hover {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
 }

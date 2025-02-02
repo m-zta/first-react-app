@@ -5,7 +5,8 @@
   /* Dynamic spacing. Had to do this here
   instead of using bootstrap utilities because 
   the maximal bootstrap margin is mt-5 */
-  margin-top: 10vh;
+  margin-top: 15vh;
+  height: 100vh;
 }
 
 @media (max-width: 768px) {
@@ -21,7 +22,6 @@
 
 .home-container p {
   font-size: 1.2rem;
-  color: #ddd;
 }
 
 .home-container img {

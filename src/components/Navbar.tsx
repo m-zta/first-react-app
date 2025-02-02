@@ -1,15 +1,29 @@
 // Documentation on react-bootstrap: https://react-bootstrap.netlify.app/
 // Documentation on react-router components: https://v5.reactrouter.com/web/guides/primary-components
 
+import { useState } from "react"; // for managing dark mode
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"; // to create the navbar
 import { Link } from "react-router-dom"; // to create links in the navbar to different pages of the app
-import { Form, FormControl, Button } from "react-bootstrap"; // to create a search bar in the navbar
+import { Form } from "react-bootstrap"; // to create a search bar in the navbar
 
 import pokerCards from "../assets/images/poker-cards.png"; // to import the logo image
 
 import "../assets/styles/navbar.css";
 
 export default function MyNavbar() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [language, setLanguage] = useState("en");
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle("dark-theme");
+  };
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    console.log(`Language changed to ${lang}`); // Replace with actual language change logic
+  };
+
   return (
     <Navbar expand="md" bg="primary" data-bs-theme="dark">
       {/* data-bs-theme is the new way. variant is deprecated */}
@@ -39,7 +53,12 @@ export default function MyNavbar() {
             <Nav.Link as={Link} to="/contact">
               Contact
             </Nav.Link>
-            <NavDropdown title="More" id="basic-nav-dropdown">
+
+            <NavDropdown
+              title="More"
+              menuVariant="dark"
+              id="basic-nav-dropdown"
+            >
               {/* NavDropdown is a dropdown menu */}
               <NavDropdown.Item as={Link} to="/more1">
                 First item
@@ -54,16 +73,33 @@ export default function MyNavbar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            {/* d-flex makes the form flex */}
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-light">Go</Button>
+
+          <Form className="d-flex align-items-center">
+            <label className="switch">
+              <input
+                type="checkbox"
+                onChange={toggleDarkMode}
+                checked={darkMode}
+              />
+              <span className="slider round"></span>
+            </label>
           </Form>
+
+          <NavDropdown
+            title={language.toLowerCase()}
+            id="language-dropdown"
+            className="ms-3"
+          >
+            <NavDropdown.Item onClick={() => changeLanguage("en")}>
+              English
+            </NavDropdown.Item>
+            <NavDropdown.Item onClick={() => changeLanguage("de")}>
+              Deutsch
+            </NavDropdown.Item>
+            <NavDropdown.Item onClick={() => changeLanguage("es")}>
+              Español
+            </NavDropdown.Item>
+          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>

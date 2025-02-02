@@ -1,5 +1,6 @@
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import profilePic from "../assets/images/clown.jpg"; // Replace with actual image path
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -26,7 +27,11 @@ export default function Home() {
               Google. I'm passionate about building amazing things with
               technology.
             </p>
-            <Button variant="primary">Learn More</Button>
+            <Link to="/about" className="btn btn-primary">
+              {/* Button would've worked fine, but vscode was showing an error at
+              the as=Link prop, so I chose to use the Link component instead */}
+              Learn More
+            </Link>
           </Container>
         </Col>
       </Row>
