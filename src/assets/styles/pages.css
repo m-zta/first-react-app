@@ -2,6 +2,17 @@
 
 .home-container {
   text-align: left;
+  /* Dynamic spacing. Had to do this here
+  instead of using bootstrap utilities because 
+  the maximal bootstrap margin is mt-5 */
+  margin-top: 10vh;
+}
+
+@media (max-width: 768px) {
+  /* For smaller screens up to 768px in width */
+  .home-container {
+    margin-top: 5vh;
+  }
 }
 
 .home-container h1 {

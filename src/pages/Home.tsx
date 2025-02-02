@@ -3,7 +3,7 @@ import profilePic from "../assets/images/clown.jpg"; // Replace with actual imag
 
 export default function Home() {
   return (
-    <Container className="mt-5 home-container">
+    <Container className="home-container">
       <Row className="align-items-center text-center text-md-start">
         {/* Left Column: Profile Image */}
         <Col md={6} className="d-flex justify-content-center mb-4 mb-md-0">
