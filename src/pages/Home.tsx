@@ -1,12 +1,15 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import profilePic from "../assets/images/clown.jpg"; // Replace with actual image path
 import { Link } from "react-router-dom";
+
+import profilePic from "../assets/images/clown.jpg";
 
 export default function Home() {
   return (
     <Container className="home-container">
       <Row className="align-items-center text-center text-md-start">
-        {/* Left Column: Profile Image */}
+        {/* Left Column: Profile Image
+        md={6} means that the column will take up 6/12 = 50% 
+        of the width on medium screens */}
         <Col md={6} className="d-flex justify-content-center mb-4 mb-md-0">
           <Image
             src={profilePic}
