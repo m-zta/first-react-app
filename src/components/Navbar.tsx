@@ -28,7 +28,6 @@ export default function MyNavbar() {
     <Navbar expand="md" bg="primary" data-bs-theme="dark">
       {/* data-bs-theme is the new way. variant is deprecated */}
       <Container>
-        {/* Container is not required, but adds padding */}
         <Navbar.Brand as={Link} to="/">
           <img
             src={pokerCards}
@@ -37,7 +36,7 @@ export default function MyNavbar() {
           />{" "}
           Bloody App
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle/>
         {/* toggle button shown on small screens */}
         <Navbar.Collapse id="basic-navbar-nav">
           {/* collapsible content */}
@@ -56,7 +55,7 @@ export default function MyNavbar() {
 
             <NavDropdown
               title="More"
-              menuVariant="dark"
+              menuVariant="light"
               id="basic-nav-dropdown"
             >
               {/* NavDropdown is a dropdown menu */}

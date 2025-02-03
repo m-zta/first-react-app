@@ -23,7 +23,7 @@ export default function Home() {
 
         {/* Right Column: Text */}
         <Col md={6}>
-        {/* TODO: have to find a way to get a margin to the home text */}
+        {/* TODO: have to find a way to get a margin/padding to the home text */}
           <Container className="text-center text-md-start">
             <h1 className="mb-4">Hi. I'm Clown.</h1>
             <p className="mb-5">
