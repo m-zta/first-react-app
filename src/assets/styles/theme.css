@@ -1,0 +1,25 @@
+:root {
+  --text-color: black;
+  --bg-color: white;
+  --navbar-bg: var(--bs-primary);
+  --nav-text-color: white;
+}
+
+.dark-theme {
+  --text-color: white !important;
+  --bg-color: #121212 !important;
+  --navbar-bg: var(--bs-primary) !important;
+  --nav-text-color: white !important;
+}
+
+/* Make sure Navbar Background doesn't change */
+.navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+/* Apply Theme Variables */
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}

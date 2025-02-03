@@ -1,16 +1,38 @@
-/* Navbar Image Styling */
-.navbar-brand img {
-  height: 30px;
-  width: 30px;
-  margin-right: 10px;
-}
-
-/* not doing anything... */
-.navbar {
+/* ✅ Navbar Custom Styling */
+.navbar-custom {
+  background-color: var(--navbar-bg);
   padding: 10px 20px;
 }
 
-/* Dark Mode Toggle */
+.navbar-brand,
+.navbar .nav-link,
+.navbar .nav-dropdown {
+  color: white !important;
+}
+
+/* ✅ Dropdown Styling */
+#language-dropdown .dropdown-toggle {
+  color: var(--nav-text-color) !important;
+}
+
+#language-dropdown .dropdown-menu {
+  background-color: var(--navbar-bg);
+}
+
+/* ✅ Hover Effects for Navbar Links */
+.nav-link {
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* ✅ Dark Mode Toggle Switch */
 .switch {
   position: relative;
   display: inline-block;
@@ -57,22 +79,8 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-.dark-theme {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.nav-link {
-  /* Had to enforce the white font color for
-  the drop down title with !important. There might
-  be a better fix, tho...*/
-  color: white !important;
-  position: relative;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3 ease-in-out;
-}
-
-.nav-link:hover {
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 80%);
+.navbar-logo {
+  height: 30px;
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
 }

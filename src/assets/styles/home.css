@@ -1,8 +1,5 @@
 .home-container {
   text-align: left;
-  /* Dynamic spacing. Had to do this here
-  instead of using bootstrap utilities because 
-  the maximal bootstrap margin is mt-5 */
   margin-top: 15vh;
   height: 100vh;
 }
@@ -21,16 +18,22 @@
   font-size: 1.2rem;
 }
 
+.home-text {
+  margin: 40px 40px;
+  padding: 20px;
+}
+
+/* Image Styles - Ensures Circular Shape & Responsiveness */
 .home-container img {
   border: 5px solid #646cff;
-  width: 100%; /* Allow it to scale */
-  min-width: 350px; /* Prevents it from shrinking too small */
-  max-width: 400px; /* Prevents it from growing too large */
-  height: auto; /* Adjust height dynamically */
-  aspect-ratio: 1 / 1; /* Ensures it's always a perfect circle */
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures the image fills the space properly */
-  margin: 40px 40px;
+  width: 100%;
+  min-width: 350px;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 40px;
   padding: 20px;
   box-shadow: rgba(72, 135, 202, 0.8) 0px 0px 90px 5px;
 }
