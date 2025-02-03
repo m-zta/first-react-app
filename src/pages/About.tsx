@@ -3,12 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 
 // import joker from "../assets/images/joker.jpg";
 
+import "../assets/styles/about.css";
+
 export default function About() {
   return (
-    <div className="container">
+    <div className="about-container">
       <Container>
-        <Row className="justify-content-md-center">
-          <Col xs lg="2">
+        <Row className="justify-content-md-center first-row">
+          <Col xs lg="2" className="first-col">
             1 of 3
           </Col>
           <Col md="auto">Variable width content</Col>

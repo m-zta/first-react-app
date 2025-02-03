@@ -1,0 +1,13 @@
+.about-container {
+  text-align: left;
+  margin-top: 15vh;
+  height: 100vh;
+}
+
+.first-row {
+  background-color: rgb(130, 255, 130);
+}
+
+.first-col {
+  background-color: rgb(255, 175, 83);
+}

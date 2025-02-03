@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import profilePic from "../assets/images/clown.jpg";
 
+import "../assets/styles/home.css";
+
 export default function Home() {
   return (
     <Container className="home-container">
@@ -16,14 +18,13 @@ export default function Home() {
             alt="Clown"
             roundedCircle
             fluid
-            width="400"
-            height="400"
           />
         </Col>
 
         {/* Right Column: Text */}
         <Col md={6}>
-          <Container>
+        {/* TODO: have to find a way to get a margin to the home text */}
+          <Container className="text-center text-md-start">
             <h1 className="mb-4">Hi. I'm Clown.</h1>
             <p className="mb-5">
               Welcome to my world. I am a lead software engineer and founder of
